@@ -312,7 +312,7 @@ table td.fileaction {
 	width: 32px;
 	text-align: center;
 }
-table td.filename a.name {
+table td.filename p.name {
 	display: flex;
 	position:relative; /* Firefox needs to explicitly have this default set … */
 	-moz-box-sizing: border-box;
@@ -470,7 +470,7 @@ table td.selection {
 	-webkit-transition:background-image 500ms; -moz-transition:background-image 500ms; -o-transition:background-image 500ms; transition:background-image 500ms;
 }
 
-#fileList tr td.filename a.name label {
+#fileList tr td.filename p.name label {
 	position: absolute;
 	width: 80%;
 	height: 50px;
@@ -642,9 +642,8 @@ a.action > img {
 }
 
 #fileList tr:hover a.action.disabled:hover * {
-	cursor: default;
+	cursor: default !important;
 }
-
 .summary {
 	opacity: .3;
 	/* add whitespace to bottom of files list to correctly show dropdowns */

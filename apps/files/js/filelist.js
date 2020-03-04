@@ -1534,10 +1534,15 @@
 			else {
 				linkUrl = this.getDownloadUrl(name, path, type === 'dir');
 			}
-			var linkElem = $('<a></a>').attr({
+			let linkElem = $('<a></a>').attr({
 				"class": "name",
 				"href": linkUrl
 			});
+			if (this._defaultFileActionsDisabled) {
+				linkElem = $('<p></p>').attr({
+					"class": "name"
+				})
+			}
 
 			linkElem.append('<div class="thumbnail-wrapper"><div class="thumbnail" style="background-image:url(' + icon + ');"></div></div>');
 
